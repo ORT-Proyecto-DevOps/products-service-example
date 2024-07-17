@@ -33,4 +33,9 @@ public class ProductsEndpoint {
         }
     }
 
+    @GetMapping(path = "/health", produces = MediaType.APPLICATION_JSON_VALUE)
+    public ResponseEntity<String> healthCheck() {
+        return ResponseEntity.ok("{"status":"UP"}");
+    }
+
 }
